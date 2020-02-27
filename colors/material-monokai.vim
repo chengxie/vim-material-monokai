@@ -86,7 +86,7 @@ let s:darkblack   = { "gui": "#1F292D", "cterm": "233" }
 let s:grey        = { "gui": "#3F565F", "cterm": "238" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "241" }
 let s:darkgrey    = { "gui": "#232E33", "cterm": "236" }
-let s:coolgrey    = { "gui": "#506E79", "cterm": "241" }
+let s:coolgrey    = { "gui": "#808080", "cterm": "241" }
 
 let s:pink        = { "gui": "#FC3488", "cterm": "197" }
 let s:green       = { "gui": "#A6E22E", "cterm": "148" }
@@ -108,10 +108,10 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 " ------------
 
 " editor
-call s:h("Normal",        { "fg": s:white,      "bg": s:black })
+call s:h("Normal",        { "fg": s:white,      "bg": none }) "s:black
 call s:h("ColorColumn",   {                     "bg": s:lightgrey })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
-call s:h("CursorLine",    {                     "bg": s:darkblack })
+call s:h("CursorLine",    {                     "bg": s:lightblack })
 call s:h("NonText",       { "fg": s:lightgrey })
 call s:h("StatusLine",    { "fg": s:white,      "bg": s:darkblack })
 call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:coolgrey,     "format": "reverse" })
@@ -127,8 +127,8 @@ call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": 
 call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
 call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
-call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
-call s:h("SignColumn",    {                     "bg": s:lightblack })
+call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:lightblack })
+call s:h("SignColumn",    {                     "bg": s:darkgrey })
 call s:h("SpellCap",      {                                           "format": "underline"})
 call s:h("SpellLocal",    { "fg": s:yellow,                           "format": "underline"})
 if g:materialmonokai_subtle_spell == 1
