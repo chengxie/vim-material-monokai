@@ -108,7 +108,7 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 " ------------
 
 " editor
-call s:h("Normal",        { "fg": s:white,      "bg": none }) "s:black
+call s:h("Normal",        { "fg": s:white }) 
 call s:h("ColorColumn",   {                     "bg": s:lightgrey })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkgrey })
