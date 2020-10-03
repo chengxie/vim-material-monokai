@@ -77,7 +77,6 @@ endfunction
 " Palettes
 " --------
 
-
 let s:white       = { "gui": "#CDD3DE", "cterm": "253" }
 let s:black       = { "gui": "#263238", "cterm": "235" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "234" }
@@ -98,6 +97,7 @@ let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
+let s:bg		  = { "gui": "#001627", "cterm": "235" }
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
 let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
@@ -107,8 +107,9 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 " Highlighting
 " ------------
 
+
 " editor
-call s:h("Normal",        { "fg": s:white }) 
+call s:h("Normal",        { "fg": s:white,		"bg": s:bg }) 
 call s:h("ColorColumn",   {                     "bg": s:lightgrey })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkgrey })
