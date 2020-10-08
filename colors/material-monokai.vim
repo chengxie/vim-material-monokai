@@ -108,10 +108,10 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 " Highlighting
 " ------------
 
-augroup BgHighlight
-	au! WinEnter * set wincolor=Normal cursorline
-	au! WinLeave * set wincolor=NormalNC nocursorline
-augroup end
+"augroup BgHighlight
+	"au! WinEnter * set wincolor=Normal cursorline
+	"au! WinLeave * set wincolor=NormalNC nocursorline
+"augroup end
 
 " editor
 call s:h("Normal",        { "fg": s:white,		"bg": s:actbg }) 
