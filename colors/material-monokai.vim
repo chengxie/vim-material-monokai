@@ -97,8 +97,8 @@ let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
 
-let s:bg		  = { "gui": "#141a1e", "cterm": "235" }
 let s:actbg		  = { "gui": "#001627", "cterm": "NONE" }
+let s:inactbg	  = { "gui": "#141a1e", "cterm": "235" }
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
 let s:delbg       = { "gui": "#f75f5f", "cterm": "167" }
@@ -110,12 +110,17 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 
 "augroup BgHighlight
 	"au! WinEnter * set wincolor=Normal cursorline
-	"au! WinLeave * set wincolor=NormalNC nocursorline
+	"au! WinLeave * set wincolor=NormalInactive nocursorline
 "augroup end
 
 " editor
-call s:h("Normal",        { "fg": s:white,		"bg": s:actbg }) 
-call s:h("NormalNC",      { "fg": s:white,		"bg": s:bg }) 
+if has("gui_running")
+	call s:h("Normal",				{ "fg": s:white,	"bg": s:actbg	}) 
+else
+	call s:h("Normal",				{ "fg": s:white						}) 
+endif
+
+call s:h("NormalInactive",      { "fg": s:white,	"bg": s:inactbg	}) 
 call s:h("ColorColumn",   {                     "bg": s:lightgrey })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkgrey })
