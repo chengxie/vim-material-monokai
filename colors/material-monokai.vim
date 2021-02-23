@@ -115,9 +115,9 @@ let s:changebg    = { "gui": "#5f5f87", "cterm": "60" }
 
 " editor
 if has("gui_running")
-	call s:h("Normal",				{ "fg": s:white,	"bg": s:actbg	}) 
+	call s:h("Normal",				{ "fg": s:white,	"bg": s:actbg }) 
 else
-	call s:h("Normal",				{ "fg": s:white						}) 
+	call s:h("Normal",				{ "fg": s:white,	"bg": s:actbg }) 
 endif
 
 call s:h("NormalInactive",      { "fg": s:white,	"bg": s:inactbg	}) 
